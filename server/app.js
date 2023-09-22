@@ -26,8 +26,7 @@ const io = require("socket.io")(server, {
     allowEIO3: true,
     cors: {
       origin: "https://socialcloudclient.onrender.com", // from the screenshot you provided
-      methods: ["GET", "POST"],
-      credentials: true
+      methods: ["GET", "POST"]
     }
   });
 
