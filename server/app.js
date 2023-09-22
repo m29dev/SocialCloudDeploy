@@ -20,14 +20,16 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 const server = http.createServer(app)
-const io = new Server(server, {
-    cors: {
-        origin: 'https://socialcloudserver.onrender.com',
-        methods: ['GET', 'POST'],
-        allowedHeaders: ["my-custom-header"],
-        credentials: true
-    }
-})
+const io = new Server(server)
+    // {
+    //     cors: {
+    //         origin: 'https://socialcloudserver.onrender.com',
+    //         methods: ['GET', 'POST'],
+    //         allowedHeaders: ["my-custom-header"],
+    //         credentials: true
+    //     }
+    // }
+//)
 io.use((socket, next) => {
     const userId = socket.handshake.auth.userId
     if (!userId) {
