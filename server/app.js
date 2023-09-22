@@ -18,13 +18,6 @@ app.use(cors())
 app.use(express.json())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use(
-    cookieSession({
-        name: 'jwt',
-        secret: process.env.JWT_KEY,
-        httpOnly: true
-    })
-)
 
 const server = http.createServer(app)
 const io = new Server(server, {

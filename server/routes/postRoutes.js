@@ -6,15 +6,15 @@ const controller = require('../controllers/postController.js')
 const router = express.Router()
 
 //create
-router.post('/api/posts', verifyToken, upload.single('image'), controller.posts_create_post)
+router.post('/api/posts', upload.single('image'), controller.posts_create_post)
 //read
-router.get('/api/posts/:userId', verifyToken, controller.posts_feed_get)
-router.get('/api/posts/:userId/filter', verifyToken, controller.posts_user_get)
+router.get('/api/posts/:userId', controller.posts_feed_get)
+router.get('/api/posts/:userId/filter', controller.posts_user_get)
 //update
-router.put('/api/posts/:id/update', verifyToken, controller.posts_update_put)
-router.put('/api/posts/:id/like', verifyToken, controller.posts_like_put)
+router.put('/api/posts/:id/update', controller.posts_update_put)
+router.put('/api/posts/:id/like', controller.posts_like_put)
 
 //delete
-router.delete('/api/posts/:id/delete', verifyToken, controller.posts_delete)
+router.delete('/api/posts/:id/delete', controller.posts_delete)
 
 module.exports = router
