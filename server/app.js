@@ -21,6 +21,8 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 const server = http.createServer(app)
 const io = new Server(server, {cors: {origin: "*"}})
+
+//test1
     // {
     //     cors: {
     //         origin: 'https://socialcloudserver.onrender.com',
