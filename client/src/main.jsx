@@ -14,7 +14,9 @@ import ProtectedRoute from './screens/ProtectedRoute.jsx'
 import ChatPage from './screens/userPages/ChatPage.jsx'
 //init socket io
 import { io } from "socket.io-client"
-const socket = io("https://socialcloudserver.onrender.com", { autoConnect: false })
+const socket = io("https://socialcloudserver.onrender.com", { autoConnect: false, withCredentials: true, extraHeaders: {
+  "my-custom-header": "abcd" 
+}})
 
 const router = createBrowserRouter(
   createRoutesFromElements(

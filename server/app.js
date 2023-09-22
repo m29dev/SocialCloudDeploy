@@ -23,7 +23,9 @@ const server = http.createServer(app)
 const io = new Server(server, {
     cors: {
         origin: 'https://socialcloudserver.onrender.com',
-        methods: ['GET', 'POST']
+        methods: ['GET', 'POST'],
+        allowedHeaders: ["my-custom-header"],
+        credentials: true
     }
 })
 io.use((socket, next) => {
