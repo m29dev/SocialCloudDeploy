@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 const server = http.createServer(app)
 //const io = new Server(server, {cors: {origin: "*"}})
 
-const io = require("socket.io")(httpServer, {
+const io = require("socket.io")(server, {
     allowEIO3: true,
     cors: {
       origin: "https://socialcloudclient.onrender.com", // from the screenshot you provided
