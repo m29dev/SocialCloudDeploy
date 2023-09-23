@@ -13,8 +13,6 @@ Technologies used in the project:
 *   Express.js
 *   React
 *   Node.js
-*   JWT
-*   CookieSession
 *   Bcryptjs
 *   Multer
 *   Cloudinary
@@ -30,7 +28,6 @@ Here're some of the project's best features:
 
 *   create read update delete User's Account
 *   create read update delete User's Post
-*   user authentication using JWT Tokens
 *   interactions with friend's posts
 *   messenger chat with real-time message broadcasting provided by socket.io
 
