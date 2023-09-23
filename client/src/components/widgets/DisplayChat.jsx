@@ -30,8 +30,7 @@ const DisplayChat = ({ chatUser, currentMessage, setCurrentMessage, handleSendMe
             <Card
                 className="chatItemContainer"
                 style={{
-                    maxWidth: isMobile ? "100%" : "90%",
-                    marginTop: isMobile ? "0px" : ""
+                    maxWidth: isMobile ? "100%" : "90%"
                 }}
             >
 

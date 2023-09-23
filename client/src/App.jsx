@@ -13,9 +13,11 @@ const App = ({ socket }) => {
 
   return (
     <>
-      <CssBaseline></CssBaseline>
+      <CssBaseline></CssBaseline> 
+
       <Navbar socket={socket}></Navbar>
       <Outlet></Outlet>
+
       <ToastContainer
         style={{
           marginTop: "55px"
