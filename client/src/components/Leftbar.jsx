@@ -76,7 +76,7 @@ const Leftbar = ({ userProfile, homePage }) => {
 
                                 <h1>{user.firstName} {user.lastName}</h1>
 
-                                <CardContent>
+                                <CardContent className="userInfo">
                                     <Typography variant="body" color="text.secondary">
                                         Work:
                                     </Typography>
@@ -354,7 +354,7 @@ const Leftbar = ({ userProfile, homePage }) => {
 
                                     <h1>{user.firstName} {user.lastName}</h1>
 
-                                    <CardContent>
+                                    <CardContent className="userInfo">
                                         <Typography variant="body" color="text.secondary">
                                             Work:
                                         </Typography>

@@ -58,27 +58,6 @@ body{
     align-content: center;
 }
 
-@media screen and (max-width: 800px) {
-    .feed {
-        width: 100vw;
-        /* min-width: 100%; */
-        padding: 1%;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: stretch;
-        align-content: center;
-    }
-}
-
-@media screen and (max-width: 1500px) {
-    .leftBarItem, .leftBar{
-        margin: 0px;
-        padding: 0px;
-    }
-}
-
 .rightBar {
     width: 350px;
     margin-right: 5%;
@@ -111,6 +90,11 @@ body{
     align-items: center;
     align-content: center;
     border-bottom: #EEE;
+}
+
+.userInfo{
+    padding: 0px !important;
+    margin: 0px !important;
 }
 
 .createPostBar {
@@ -278,4 +262,30 @@ input {
 
 input:focus {
     outline: none;
+}
+
+@media screen and (max-width: 800px) {
+    .feed {
+        width: 100vw;
+        /* min-width: 100%; */
+        padding: 1%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        align-content: center;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .leftBarItem, .leftBar{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .createPostBar {
+        margin-top: 0px;
+    }
+    
 }

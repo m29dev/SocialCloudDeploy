@@ -149,7 +149,7 @@ export default function Navbar({ socket }) {
                                     navigate('/posts')
                                     window.scrollTo(0, 0)
                                 }}
-                                style={{ cursor: "pointer" }}
+                                style={{ cursor: "pointer", width: '35px', height: '35px' }}
                             />
                             <Typography
                                 variant="h6"
@@ -181,7 +181,7 @@ export default function Navbar({ socket }) {
                                     }}
                                 >
                                     <Badge badgeContent={newMessageNumber} color="error">
-                                        <MailIcon />
+                                        <MailIcon style={{width: '35px', height: '35px'}}/>
                                     </Badge>
                                 </IconButton>
 
@@ -198,6 +198,7 @@ export default function Navbar({ socket }) {
                                     <Avatar
                                         alt="user-img"
                                         src={userInfo?.picturePath}
+                                        style={{height: '30px', width: '30px'}}
                                     />
                                 </IconButton>
                             </Box>
