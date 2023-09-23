@@ -1,5 +1,5 @@
 <h1 id="title">SocialCloud: MERN full-stack app</h1>
-<p id="description">SocialCloud is a facebook-clone application with a real-time messenger chat functionality.</p>
+<p id="description">SocialCloud is a social media application with a real-time messenger chat functionality (facebook lookalike).</p>
 
 <h2>🚀 Demo</h2>
 
@@ -30,6 +30,7 @@ Here're some of the project's best features:
 *   create read update delete User's Post
 *   interactions with friend's posts
 *   messenger chat with real-time message broadcasting configured and provided with socket.io
+*   responsive layout for mobile devices
 
 <h2>Project Screenshots</h2>
 
