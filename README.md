@@ -52,3 +52,17 @@ login, register </br>
 
 edit / delete account </br>
 <img src="https://github.com/m29dev/SocialCloud/assets/123384597/651a8093-41ea-40e6-9763-ea090f4dad2e" alt="project-screenshot" height="200">
+
+<h2>Test Account</h2>
+
+<p>login:</p>
+
+```
+test@gmail.com
+```
+
+<p>password:</p>
+
+```
+123
+```
