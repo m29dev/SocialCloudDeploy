@@ -1,6 +1,5 @@
 const bcrypt = require('bcryptjs')
 const User = require('../models/User.js')
-const { createToken, clearToken } = require('../config/authConfig.js')
 
 //cloudinary config
 const cloudinary = require('cloudinary').v2
@@ -46,7 +45,6 @@ const register_post = async (req, res) => {
         const user = await User.findOne({ email })
         user.password = undefined
 
-        //createToken(req, user._id)
         delete user.password
 
         res.status(200).json(user)
@@ -66,7 +64,6 @@ const login_post = async (req, res) => {
         const validatePassword = bcrypt.compareSync(password, user.password)
         if (!validatePassword) return res.status(400).json({ message: 'wrong email or password' })
 
-        //createToken(req, user._id)
         user.password = undefined
 
         res.status(200).json(user)
@@ -79,7 +76,6 @@ const login_post = async (req, res) => {
 //logoout post
 const logout_post = async (req, res) => {
     try {
-        //clearToken(req)
         res.status(200).json({ message: 'user has been logged out' })
     } catch (err) {
         console.log(err)

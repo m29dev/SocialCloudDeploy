@@ -1,6 +1,5 @@
 const express = require('express')
 const { upload } = require('../config/uploadConfig.js')
-const { verifyToken } = require('../config/authConfig.js')
 const controller = require('../controllers/userController.js')
 
 const router = express.Router()

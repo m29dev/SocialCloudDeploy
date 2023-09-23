@@ -1,6 +1,5 @@
 const User = require('../models/User.js')
 const Post = require('../models/Post.js')
-const { query } = require('express')
 
 //cloudinary config
 const cloudinary = require('cloudinary').v2

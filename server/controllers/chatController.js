@@ -1,5 +1,3 @@
-const User = require('../models/User.js')
-const Post = require('../models/Post.js')
 const Chat = require('../models/Chat.js')
 
 const chats_userId_friendId_post = async (req, res) => {
@@ -22,7 +20,6 @@ const chats_userId_friendId_post = async (req, res) => {
                 messages: [message]
             })
             await newChat.save()
-            console.log('chat has been created')
             return res.status(200).json({ message: 'chat has been created' })
         }
 
@@ -30,7 +27,6 @@ const chats_userId_friendId_post = async (req, res) => {
         if (thisChat) {
             thisChat.messages.push(message)
             const updatedChat = await Chat.findByIdAndUpdate({ _id: thisChat._id }, { messages: thisChat.messages })
-            console.log('chat has been updated')
             return res.status(200).json({ message: 'chat has been updated' })
         }
 
@@ -59,16 +55,7 @@ const chats_userId_friendId_get = async (req, res) => {
     }
 }
 
-// const chats_userId_friendId_put = async (req, res) => {
-//     try {
-
-//     } catch (err) {
-//         console.log(err)
-//     }
-// }
-
 module.exports = {
     chats_userId_friendId_post,
     chats_userId_friendId_get,
-    // chats_userId_friendId_put
 }

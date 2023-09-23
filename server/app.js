@@ -8,10 +8,8 @@ const authRoutes = require('./routes/authRoutes')
 const userRoutes = require('./routes/userRoutes')
 const postRoutes = require('./routes/postRoutes')
 const chatRoutes = require('./routes/chatRoutes')
-const cookieSession = require('cookie-session')
 const User = require('./models/User')
 const http = require('http')
-const { Server } = require('socket.io')
 
 dotenv.config()
 app.use(cors())
@@ -20,26 +18,15 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 const server = http.createServer(app)
-//const io = new Server(server, {cors: {origin: "*"}})
 
 const io = require("socket.io")(server, {
     allowEIO3: true,
     cors: {
-      origin: "https://socialcloudclient.onrender.com", // from the screenshot you provided
+      origin: "https://socialcloudclient.onrender.com",
       methods: ["GET", "POST"]
     }
   });
 
-//test1
-    // {
-    //     cors: {
-    //         origin: 'https://socialcloudserver.onrender.com',
-    //         methods: ['GET', 'POST'],
-    //         allowedHeaders: ["my-custom-header"],
-    //         credentials: true
-    //     }
-    // }
-//)
 io.use((socket, next) => {
     const userId = socket.handshake.auth.userId
     if (!userId) {

@@ -128,16 +128,12 @@ const users_userId_friendId_put = async (req, res) => {
     try {
         const { id, friendId } = req.params
 
-        console.log("userId: ", id)
-        console.log("friendId: ", friendId)
-
         const user = await User.findById({ _id: id })
         const friend = await User.findById({ _id: friendId })
 
         if (user.friends.some(e => JSON.stringify(e._id) === `"${friendId}"`)) {
             user.friends = user.friends.filter(e => JSON.stringify(e._id) !== `"${friendId}"`)
             friend.friends = friend.friends.filter(e => JSON.stringify(e._id) !== `"${id}"`)
-            console.log('removin friend ')
         } else {
             user.friends.push({
                 _id: friend._id,
@@ -155,7 +151,6 @@ const users_userId_friendId_put = async (req, res) => {
                 location: user.location,
                 occupation: user.occupation
             })
-            console.log('addin friend')
         }
 
         await user.save()
