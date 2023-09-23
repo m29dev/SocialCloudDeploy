@@ -1,13 +1,6 @@
 const User = require('../models/User.js')
 const Post = require('../models/Post.js')
-
-//cloudinary config
-const cloudinary = require('cloudinary').v2
-cloudinary.config({
-    cloud_name: process.env.CLOUD_NAME,
-    api_key: process.env.API_KEY,
-    api_secret: process.env.API_SECRET
-})
+const {cloudinary} = require('../config/cloudinaryConfig.js')
 
 //create post
 const posts_create_post = async (req, res) => {

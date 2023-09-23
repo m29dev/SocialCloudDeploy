@@ -1,18 +1,3 @@
-// const multer = require('multer')
-
-// //file storage
-// const storage = multer.diskStorage({
-//     destination: function (req, res, cb) {
-//         cb(null, 'public/assets')
-//     },
-//     filename: function (req, file, cb) {
-//         cb(null, file.originalname)
-//     }
-// })
-// const upload = multer({ storage })
-
-// module.exports = upload
-
 require('dotenv').config()
 
 //multer config
@@ -29,9 +14,8 @@ cloudinary.config({
     api_secret: process.env.API_SECRET
 })
 
-//export to auctionController
+//export to controllers
 const uploadImage = (image) => {
-
     const b64 = Buffer.from(image.buffer).toString("base64")
     let dataURI = "data:" + image.mimetype + ";base64," + b64
 
@@ -39,15 +23,10 @@ const uploadImage = (image) => {
         resource_type: "auto",
         folder: 'auctionPhoto'
     }).then(result => {
-        console.log(result)
         return result.secure_url
     }).catch(err => {
         console.log(err)
     })
-
-    //console.log(cldRes)
-
-    //return cldRes.secure_url
 }
 
 module.exports = {
