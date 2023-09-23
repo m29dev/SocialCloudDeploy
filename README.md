@@ -29,7 +29,7 @@ Here're some of the project's best features:
 *   create read update delete User's Account
 *   create read update delete User's Post
 *   interactions with friend's posts
-*   messenger chat with real-time message broadcasting provided by socket.io
+*   messenger chat with real-time message broadcasting configured and provided with socket.io
 
 <h2>Project Screenshots</h2>
 
