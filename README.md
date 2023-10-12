@@ -1,5 +1,5 @@
 <h1 id="title">SocialCloud: MERN full-stack app</h1>
-<p id="description">SocialCloud's a social media application with real-time messenger chat feature (facebook + messenger clone).</p>
+<p id="description">SocialCloud's a social media application with real-time messenger chat feature (facebook + messenger clone)</p>
 
 <h2>🚀 Demo</h2>
 
